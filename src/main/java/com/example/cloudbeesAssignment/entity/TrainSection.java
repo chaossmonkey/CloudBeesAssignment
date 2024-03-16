@@ -5,7 +5,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class TrainSection {
-    private Map<String, Map<Integer,Passenger>> seatAllocations;
+    private final Map<String, Map<Integer,Passenger>> seatAllocations;
 
     public TrainSection() {
         this.seatAllocations = new HashMap<>();
