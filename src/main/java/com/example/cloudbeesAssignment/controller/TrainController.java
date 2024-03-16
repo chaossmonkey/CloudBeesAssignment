@@ -2,7 +2,6 @@ package com.example.cloudbeesAssignment.controller;
 
 import com.example.cloudbeesAssignment.entity.Passenger;
 import com.example.cloudbeesAssignment.entity.Ticket;
-import com.example.cloudbeesAssignment.enums.SeatUpdateStatus;
 import com.example.cloudbeesAssignment.service.TrainService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -48,7 +47,6 @@ public class TrainController {
         Optional<Ticket> ticketOptional = trainService.getTicket(userEmail);
 
         if (ticketOptional.isPresent()) {
-            Ticket ticket = ticketOptional.get();
             boolean updateResult = trainService.updateSeatNumber(userEmail, newSeatNumber);
 
             if (updateResult) {
